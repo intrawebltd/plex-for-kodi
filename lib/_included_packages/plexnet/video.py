@@ -54,9 +54,7 @@ class Video(media.MediaItem):
 
     def selectedAudioStream(self):
         if self.audioStreams:
-            for stream in self.audioStreams:
-                if stream.isSelected():
-                    return stream
+            return self.audioStreams[-1]
         return None
 
     def selectedSubtitleStream(self):
