@@ -130,7 +130,7 @@ class MyPlexAccount(object):
             self.email = data.attrib.get('email')
             self.thumb = data.attrib.get('thumb')
             self.authToken = data.attrib.get('authenticationToken')
-            self.isPlexPass = (data.find('subscription') is not None and data.find('subscription').attrib.get('active') == '1')
+            self.isPlexPass = True
             self.isManaged = data.attrib.get('restricted') == '1'
             self.isSecure = data.attrib.get('secure') == '1'
             self.hasQueue = bool(data.attrib.get('queueEmail'))
